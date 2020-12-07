@@ -1,0 +1,17 @@
+// https://eslint.org/docs/user-guide/configuring
+{
+  "root": true, // To limit ESLint to a specific project
+  "parser": "babel-eslint",
+  "extends": ["prettier"], // A configuration file can extend the set of enabled rules from base configurations.
+  "plugins": ["@typescript-eslint", "jest", "prettier"], // ESLint supports the use of third-party plugins. Before using the plugin, you have to install it using npm.
+  "env": {
+    "jest/globals": true
+  },
+  "rules": {
+    "no-bitwise": "off",
+    "no-lonely-if": "off",
+    "class-methods-use-this": "off",
+    "arrow-body-style": "off",
+    "no-loop-func": "off"
+  }
+}
