@@ -10,9 +10,6 @@
 | Yarn       | 1.19.1             |      |
 | TextEditor | Visual Studio Code |      |
 
-<br/>
-<br/>
-
 ## 실행방법
 
 > 1. ### Node 설치 <https://nodejs.org/ko/>
@@ -31,13 +28,16 @@ $ yarn
 
 > 4. ### 실행방법
 
+- 실행하고 싶은 파일을 열고
 - F1 -> "run test task" 입력 > 엔터
+- js파일이면 Run node / ts파일이면 Run ts-node
 
 > 5. ### 실행방법(VSCode 실행 단축키 설정)
 
 - File > Preferences > Keyboard Shortcuts
 - "run test task" 검색 후 마음에 드는 키로 설정
-- js 또는 ts 파일에서 해당 단축키로 실행
+- 실행하고 싶은 파일을 열고
+- js파일이면 Run node / ts파일이면 Run ts-node
 
 > 6. ### test 방법
 
