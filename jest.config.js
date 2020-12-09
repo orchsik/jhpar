@@ -4,7 +4,7 @@ module.exports = {
   bail: false,
 
   // Indicates whether each individual test should be reported during the run.
-  verbose: false,
+  verbose: true,
 
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: false,
@@ -20,7 +20,8 @@ module.exports = {
   testPathIgnorePatterns: ['<rootDir>/node_modules/'],
 
   // The pattern Jest uses to detect test files.
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
+  // testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.[jt]sx?$',
 
   // This option sets the URL for the jsdom environment.
   // It is reflected in properties such as location.href.
