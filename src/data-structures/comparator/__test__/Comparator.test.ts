@@ -23,14 +23,12 @@ describe('Comparator', () => {
   });
 
   it('should compare with custom comparator function', () => {
-    const comparator = new Comparator((a, b) => {
-      if (typeof a === 'string' && typeof b === 'string') {
-        if (a.length === b.length) {
-          return 0;
-        }
-        return a.length < b.length ? -1 : 1;
+    const comparator = new Comparator((a: string, b: string) => {
+      if (a.length === b.length) {
+        return 0;
       }
-      return 0;
+
+      return a.length < b.length ? -1 : 1;
     });
 
     expect(comparator.equal('a', 'b')).toBe(true);
