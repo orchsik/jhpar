@@ -36,7 +36,7 @@ function person() {
 // hc.sayHi();
 // mj.sayHi = sayHi;
 // mj.sayHi();
-// #4 바인딩
+// // #4 바인딩
 // person.call({ a: 'A' });
 
 /**
