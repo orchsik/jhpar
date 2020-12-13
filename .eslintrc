@@ -1,17 +1,80 @@
 // https://eslint.org/docs/user-guide/configuring
 {
   "root": true, // To limit ESLint to a specific project
-  "parser": "babel-eslint",
-  "extends": ["prettier"], // A configuration file can extend the set of enabled rules from base configurations.
+  // "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/eslint-recommended", "plugin:@typescript-eslint/recommended", "prettier"], // A configuration file can extend the set of enabled rules from base configurations.
   "plugins": ["@typescript-eslint", "jest", "prettier"], // ESLint supports the use of third-party plugins. Before using the plugin, you have to install it using npm.
   "env": {
     "jest/globals": true
   },
   "rules": {
-    "no-bitwise": "off",
+    "no-bitwise": 1,
     "no-lonely-if": "off",
     "class-methods-use-this": "off",
     "arrow-body-style": "off",
     "no-loop-func": "off"
+    //
+    // "arrow-return-shorthand": true,
+    // "callable-types": true,
+    // "class-name": true,
+    // "comment-format": [true, "check-space"],
+    // "curly": 1,
+    // "eofline": true,
+    // "forin": true,
+    // "import-blacklist": [true, "rxjs"],
+    // "import-spacing": true,
+    // "indent": [true, "spaces"],
+    // "interface-over-type-literal": true,
+    // "label-position": true,
+    // "max-line-length": [true, 140],
+    // "member-access": false,
+    // "member-ordering": [
+    //   true,
+    //   {
+    //     "order": ["static-field", "instance-field", "static-method", "instance-method"]
+    //   }
+    // ],
+    // "no-arg": true,
+    // "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
+    // "no-construct": true,
+    // "no-debugger": 1,
+    // "no-duplicate-super": true,
+    // "no-empty": 0,
+    // "no-empty-interface": true,
+    // "no-eval": 1,
+    // "no-inferrable-types": [true, "ignore-params"],
+    // "no-misused-new": true,
+    // "no-non-null-assertion": true,
+    // "no-shadowed-variable": true,
+    // "no-string-literal": false,
+    // "no-string-throw": true,
+    // "no-switch-case-fall-through": true,
+    // "no-trailing-whitespace": true,
+    // "no-unnecessary-initializer": true,
+    // "no-unused-expression": true,
+    // "no-use-before-declare": true,
+    // "no-var-keyword": true,
+    // "object-literal-sort-keys": false,
+    // "one-line": [true, "check-open-brace", "check-catch", "check-else", "check-whitespace"],
+    // "prefer-const": 1,
+    // "quotemark": [true, "single"],
+    // "radix": 1,
+    // "semicolon": [true, "always"],
+    // "triple-equals": [true, "allow-null-check"],
+    // "typedef-whitespace": [
+    //   true,
+    //   {
+    //     "call-signature": "nospace",
+    //     "index-signature": "nospace",
+    //     "parameter": "nospace",
+    //     "property-declaration": "nospace",
+    //     "variable-declaration": "nospace"
+    //   }
+    // ],
+    // "typeof-compare": true,
+    // "unified-signatures": true,
+    // "variable-name": false,
+    // "whitespace": [true, "check-branch", "check-decl", "check-operator", "check-separator", "check-type"]
   }
 }
