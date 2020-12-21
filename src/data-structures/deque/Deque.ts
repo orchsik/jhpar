@@ -5,43 +5,43 @@
  * 예) 입력이 한쪽으로만 가능한 Deque => 스크롤
  */
 export default class Deque<T> {
-  private count: number;
-  private targetFrontIdx: number;
+  private targetBackKey: number;
+  private targetFrontKey: number;
   private items: any;
 
   constructor() {
-    this.count = 0;
-    this.targetFrontIdx = 0;
+    this.targetBackKey = 0;
+    this.targetFrontKey = 0;
     this.items = {};
   }
 
   addFront(element: T) {
     if (this.isEmpty()) {
       this.addBack(element);
-    } else if (this.targetFrontIdx > 0) {
-      this.targetFrontIdx--;
-      this.items[this.targetFrontIdx] = element;
+    } else if (this.targetFrontKey > 0) {
+      this.targetFrontKey--;
+      this.items[this.targetFrontKey] = element;
     } else {
-      for (let i = this.count; i > 0; i--) {
+      for (let i = this.targetBackKey; i > 0; i--) {
         this.items[i] = this.items[i - 1];
       }
-      this.count++;
+      this.targetBackKey++;
       this.items[0] = element;
     }
   }
 
   addBack(element: T) {
-    this.items[this.count] = element;
-    this.count++;
+    this.items[this.targetBackKey] = element;
+    this.targetBackKey++;
   }
 
   removeFront() {
     if (this.isEmpty()) {
       return undefined;
     }
-    const result = this.items[this.targetFrontIdx];
-    delete this.items[this.targetFrontIdx];
-    this.targetFrontIdx++;
+    const result = this.items[this.targetFrontKey];
+    delete this.items[this.targetFrontKey];
+    this.targetFrontKey++;
     return result;
   }
 
@@ -49,9 +49,9 @@ export default class Deque<T> {
     if (this.isEmpty()) {
       return undefined;
     }
-    this.count--;
-    const result = this.items[this.count];
-    delete this.items[this.count];
+    this.targetBackKey--;
+    const result = this.items[this.targetBackKey];
+    delete this.items[this.targetBackKey];
     return result;
   }
 
@@ -59,14 +59,14 @@ export default class Deque<T> {
     if (this.isEmpty()) {
       return undefined;
     }
-    return this.items[this.targetFrontIdx];
+    return this.items[this.targetFrontKey];
   }
 
   peekBack() {
     if (this.isEmpty()) {
       return undefined;
     }
-    return this.items[this.count - 1];
+    return this.items[this.targetBackKey - 1];
   }
 
   isEmpty() {
@@ -75,20 +75,20 @@ export default class Deque<T> {
 
   clear() {
     this.items = {};
-    this.count = 0;
-    this.targetFrontIdx = 0;
+    this.targetBackKey = 0;
+    this.targetFrontKey = 0;
   }
 
   size() {
-    return this.count - this.targetFrontIdx;
+    return this.targetBackKey - this.targetFrontKey;
   }
 
   toString() {
     if (this.isEmpty()) {
       return '';
     }
-    let objString = `${this.items[this.targetFrontIdx]}`;
-    for (let i = this.targetFrontIdx + 1; i < this.count; i++) {
+    let objString = `${this.items[this.targetFrontKey]}`;
+    for (let i = this.targetFrontKey + 1; i < this.targetBackKey; i++) {
       objString = `${objString},${this.items[i]}`;
     }
     return objString;
