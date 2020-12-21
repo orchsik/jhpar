@@ -147,20 +147,22 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
 }
 
 const doubly = new DoublyLinkedList();
-// console.log(doubly.toString());
+// console.log(doubly);
 // console.log(doubly.getElementAt(0));
 // console.log(doubly.getHead());
 
 // push
 // doubly.push(1);
-// doubly.push(1);
-// doubly.removeAt(0);
-// console.log(doubly);
 // doubly.push(3);
 // doubly.push(4);
 // console.log(doubly.toString());
-// console.log(doubly.getElementAt(0));
+// console.log(doubly.getHead());
+// console.log(doubly.getTail());
 // console.log(doubly.getElementAt(1));
+
+// removeAt
+// doubly.removeAt(0);
+// console.log(doubly);
 
 // insert
 // doubly.insert(0, 0);
