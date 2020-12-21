@@ -26,7 +26,7 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
   }
 
   getHead() {
-    return this.tail;
+    return this.head;
   }
 
   getTail() {
@@ -54,7 +54,6 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
       index++;
       target = target.next;
     }
-
     return -1;
   }
 
@@ -89,7 +88,6 @@ export default class DoublyLinkedList<T> extends LinkedList<T> {
     if (index < 0 || index > this.count) {
       return false;
     }
-
     const newNode = new DoublyNode(element);
     if (index === 0) {
       if (!this.head) {
