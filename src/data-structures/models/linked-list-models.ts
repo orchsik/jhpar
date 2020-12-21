@@ -2,8 +2,8 @@ export class Node<T> {
   constructor(public element: T, public next?: Node<T>) {}
 }
 
-export class DoubleNode<T> extends Node<T> {
-  constructor(public element: T, public next: DoubleNode<T>, public prev: DoubleNode<T>) {
+export class DoublyNode<T> extends Node<T> {
+  constructor(public element: T, public next?: DoublyNode<T>, public prev?: DoublyNode<T>) {
     super(element, next);
   }
 }

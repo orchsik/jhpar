@@ -1,3 +1,10 @@
+/**
+ * 연결리스트 vs 배열
+ * 읽기: O(n) vs O(1)
+ * 쓰기: O(1) vs O(n)
+ * 쓰기: O(1) vs O(n)
+ */
+
 import { defaultEquals, IEqualsFunction } from '../utis';
 import { Node } from '../models/linked-list-models';
 
@@ -119,13 +126,13 @@ export default class LinkedList<T> {
   }
 }
 
-const linkedList = new LinkedList();
+// const linkedList = new LinkedList();
 // # push
-linkedList.push(1);
-linkedList.push(2);
-linkedList.push(4);
-linkedList.push(600);
-console.log(linkedList);
+// linkedList.push(1);
+// linkedList.push(2);
+// linkedList.push(4);
+// linkedList.push(600);
+// console.log(linkedList);
 
 // # getElement
 // var ele = linkedList.getElementAt(0);
