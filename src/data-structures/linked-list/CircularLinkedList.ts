@@ -1,7 +1,7 @@
 /**
  * 가장 뒤 노드가 가장 앞노드를 본다.
  */
-import { defaultEquals, IEqualsFunction } from '../utis';
+import { defaultEquals, IEqualsFunction } from '../utils';
 import LinkedList from './LinkedList';
 import { Node } from '../models/linked-list-models';
 

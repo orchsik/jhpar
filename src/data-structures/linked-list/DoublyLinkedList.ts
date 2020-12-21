@@ -10,7 +10,7 @@
  */
 import LinkedList from './LinkedList';
 import { DoublyNode } from '../models/linked-list-models';
-import { defaultEquals, IEqualsFunction } from '../utis';
+import { defaultEquals, IEqualsFunction } from '../utils';
 
 export default class DoublyLinkedList<T> extends LinkedList<T> {
   protected head: DoublyNode<T> | undefined;

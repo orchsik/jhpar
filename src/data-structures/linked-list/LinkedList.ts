@@ -5,7 +5,7 @@
  * 쓰기: O(1) vs O(n)
  */
 
-import { defaultEquals, IEqualsFunction } from '../utis';
+import { defaultEquals, IEqualsFunction } from '../utils';
 import { Node } from '../models/linked-list-models';
 
 export default class LinkedList<T> {

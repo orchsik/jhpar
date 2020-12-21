@@ -1,7 +1,7 @@
 /**
  * 자동 정렬 기능이 탑재된 연결리스트를 만들어보자
  */
-import { Compare, defaultCompare, defaultEquals, ICompareFunction, IEqualsFunction } from '../utis';
+import { Compare, defaultCompare, defaultEquals, ICompareFunction, IEqualsFunction } from '../utils';
 import LinkedList from './LinkedList';
 
 export default class SortedLinkedList<T> extends LinkedList<T> {
