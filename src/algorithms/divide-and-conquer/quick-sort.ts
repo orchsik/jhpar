@@ -3,6 +3,7 @@
  * 퀵 정렬 수행속도: O(nlogn)
  * 선택 정렬 수행속도: O(n^2)
  * 숫자배열을 줄테니까 퀵정렬을 만들어봐라.
+ * 재귀함수로 만들어라
  */
 
 export const solution = (numArr: number[]): number[] => {

@@ -1,7 +1,7 @@
 /**
  * 숫자가 들어있는 배열이 주어진다.
  * 각 수자의 곱을 구해라.
- * 단 반복문을 사용해서는 안된다.
+ * 재귀함수로 만들어라
  */
 // type ISolution = (() => ISolution) | number;
 type ISolution = (() => ISolution) | number;
