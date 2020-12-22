@@ -13,7 +13,7 @@ type Ifarm = {
 };
 type ISolution = ((a: Ifarm) => ISolution) | Ifarm;
 
-const solution = (farm: Ifarm): ISolution => {
+export const solution = (farm: Ifarm): ISolution => {
   const { width, height } = farm;
 
   if (width === 0) {
