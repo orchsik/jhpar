@@ -14,3 +14,10 @@ async function bootstrap() {
   await app.listen(3000);
 }
 bootstrap();
+
+/**
+ * NsetJS는 Express, Fastify 위에서 돌아가기 때문에
+ * 필요하면 Express의 request, response 객체를 사용할 수있다. (@Req() req, @Res() res)
+ * 그러나 그낭하면 사용하지 않는게 좋다.
+ * 왜? Fastify 가 2배정도 더 빨라서 성능이 떨어진다.
+ */
