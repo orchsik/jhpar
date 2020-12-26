@@ -11,7 +11,7 @@ export class MoviesService {
     return this.movies;
   }
 
-  getOne(id: number): CreateMovieDto {
+  getOne(id: number): Movie {
     const target = this.movies.find((movie) => movie.id === id);
     if (target) {
       return target;
@@ -21,12 +21,8 @@ export class MoviesService {
   }
 
   create(data: CreateMovieDto) {
-    if (Object.keys(data).length === 0) {
-      return 'NODATA';
-    } else {
-      this.movies.push({ ...data, id: this.movies.length });
-      return true;
-    }
+    this.movies.push({ ...data, id: this.movies.length });
+    return true;
   }
 
   deleteOne(id: number) {
@@ -36,12 +32,8 @@ export class MoviesService {
   }
 
   deleteAll() {
-    try {
-      this.movies = [];
-      return true;
-    } catch (error) {
-      return false;
-    }
+    this.movies = [];
+    return true;
   }
 
   patchOne(id: number, data: UpdateMovieDto) {
