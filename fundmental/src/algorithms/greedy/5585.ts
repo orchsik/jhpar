@@ -6,7 +6,7 @@
 // 예를 들어 거스름돈이 620엔인 경우,
 // 500엔 1개, 100엔 1개, 10엔 2개로 잔돈의 개수는 4가 된다.
 
-const solution = (price: number) => {
+export const solution = (price: number) => {
   let change = 1000 - price;
   const moneyList = [500, 100, 50, 10, 5, 1];
   let R = 0;
