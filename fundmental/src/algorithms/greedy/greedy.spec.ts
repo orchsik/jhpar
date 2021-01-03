@@ -1,19 +1,13 @@
-import { solution } from './15904';
+import { solution } from './11497';
 
 describe('', () => {
   it('test1', () => {
-    var inputList = 'Union of Computer Programming Contest club contest';
-    var r = solution(inputList);
-    expect(r).toEqual('I love UCPC');
-  });
-  it('test2', () => {
-    var inputList = 'University CPC';
-    var r = solution(inputList);
-    expect(r).toEqual('I love UCPC');
-  });
-  it('test3', () => {
-    var inputList = 'University Computer Programming';
-    var r = solution(inputList);
-    expect(r).toEqual('I hate UCPC');
+    var input: [number[], number[], number[]] = [
+      [13, 10, 12, 11, 10, 11, 12],
+      [2, 4, 5, 7, 9],
+      [6, 6, 6, 6, 6, 6, 6, 6],
+    ];
+    var answer = solution(input);
+    expect(answer).toEqual([1, 4, 0]);
   });
 });
