@@ -1,4 +1,5 @@
-// UCPC는 '전국 대학생 프로그래밍 대회 동아리 연합 여름 대회'의 줄임말로 알려져있다. 하지만 이 줄임말이 정확히 어떻게 구성되었는지는 아무도 모른다. UCPC 2018을 준비하던 ntopia는 여러 사람들에게 UCPC가 정확히 무엇의 줄임말인지 물어보았지만, 아무도 정확한 답을 제시해주지 못했다. ntopia가 들은 몇 가지 답을 아래에 적어보았다.
+// UCPC는 '전국 대학생 프로그래밍 대회 동아리 연합 여름 대회'의 줄임말로 알려져있다.
+// ntopia가 들은 몇 가지 답을 아래에 적어보았다.
 
 // Union of Computer Programming Contest club contest
 // Union of Computer Programming contest Club contest
@@ -28,4 +29,15 @@
 // 출력
 // 첫 번째 줄에 입력으로 주어진 문자열을 적절히 축약해 "UCPC"로 만들 수 있으면 "I love UCPC"를 출력하고, 만들 수 없으면 "I hate UCPC"를 출력한다.
 
-export const solution = () => {};
+export const solution = (inputList: string) => {
+  const regex = /[A-Z]/g;
+  const matched = inputList.match(regex);
+
+  let abbreviation = matched.join('');
+
+  if (abbreviation === 'UCPC') {
+    return 'I love UCPC';
+  } else {
+    return 'I hate UCPC';
+  }
+};
