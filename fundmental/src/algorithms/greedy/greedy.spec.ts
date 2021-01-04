@@ -1,13 +1,13 @@
-import { solution } from './11497';
+import { solution } from './11000';
 
 describe('', () => {
   it('test1', () => {
-    var input: [number[], number[], number[]] = [
-      [13, 10, 12, 11, 10, 11, 12],
-      [2, 4, 5, 7, 9],
-      [6, 6, 6, 6, 6, 6, 6, 6],
+    var inputs = [
+      [1, 3],
+      [2, 4],
+      [3, 5],
     ];
-    var answer = solution(input);
-    expect(answer).toEqual([1, 4, 0]);
+    var answer = solution(inputs);
+    // expect(answer).toEqual([1, 4, 0]);
   });
 });
