@@ -31,3 +31,9 @@ pque.put((-2, 'cherry'))
 print(pque.get()[1]) # apple
 print(pque.get()[1]) # cherry
 print(pque.get()[1]) # banana
+
+# 크기
+pque.put(3)
+pque.put(2)
+pque.put(1)
+print(pque.queue())
