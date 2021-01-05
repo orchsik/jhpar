@@ -54,9 +54,10 @@ roomCnt = 0
 processedLectureTimes = []
 while len(lectureTimes) != 0:
   newRoomTimes = []
+  newLectureTimes = lectureTimes
   for lectureTimeInfo in lectureTimes:
     ls, le = lectureTimeInfo
-    isOverlap = True
+    isOverlap = False if len(newRoomTimes) == 0 else True
     for roomTimeInfo in newRoomTimes:
       rs, re = roomTimeInfo
       if re > ls & rs < le: pass
@@ -66,13 +67,15 @@ while len(lectureTimes) != 0:
     if isOverlap == False:
       newRoomTimes.append(lectureTimeInfo)
       processedLectureTimes.append(lectureTimeInfo)
+      newLectureTimes.remove(lectureTimeInfo)
+
+  lectureTimes = newLectureTimes
+  roomCnt += 1
+
+print(roomCnt)
   
-  def filterProcees(item):
-    ls, le = item;
-    
 
 
-  filter(lambda item: item, lectureTimes)
 
 
         

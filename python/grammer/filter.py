@@ -14,13 +14,25 @@ def getOnlyPositiveNumber(inputs):
   return result
 
 positiveNumbers = getOnlyPositiveNumber(inputs)
-print(positiveNumbers)
+# print(positiveNumbers)
 
 def getOnlyPositiveNumber(item):
   return item > 0
 
 positiveNumbers = list(filter(getOnlyPositiveNumber, inputs))
-print(positiveNumbers)
+# print(positiveNumbers)
 
 positiveNumbers = list(filter(lambda item: item >0, inputs))
-print(positiveNumbers)
+# print(positiveNumbers)
+
+
+# def filter(cb, _list):
+#   filtered = []
+#   for item in _list:
+#     if cb(item) == True:
+#       filtered.append(item)
+#   return filtered
+
+result = list(filter(lambda x: x%2 == 0, [1,2,3,4,5,6,7,8,9,10]))
+
+print(result)
