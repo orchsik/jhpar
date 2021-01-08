@@ -3,23 +3,40 @@
 // 이러한 조건을 만족시키면서,
 // 진영 주식회사가 이번 신규 사원 채용에서 선발할 수 있는 신입사원의 최대 인원수를 구하는 프로그램을 작성하시오.
 
+// 느려~
+// export const solution = (inputs: number[][]) => {
+//   inputs.sort((i, j) => j[0] - i[0]);
+
+//   let passCnt = 0;
+//   for (let i = 0; i < inputs.length; i++) {
+//     const stu = inputs[i];
+//     const others = inputs.slice(i + 1);
+//     const isFail = others.find((other) => {
+//       if (other[1] < stu[1]) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     });
+
+//     if (!isFail) {
+//       passCnt++;
+//     }
+//   }
+
+//   return passCnt;
+// };
+
+// 스피드업!!!!!!!!!
 export const solution = (inputs: number[][]) => {
-  inputs.sort((i, j) => j[0] - i[0]);
+  const rearRanks = inputs.sort((i, j) => i[0] - j[0]).map((d) => d[1]);
 
-  let passCnt = 0;
-  for (let i = 0; i < inputs.length; i++) {
-    const stu = inputs[i];
-    const others = inputs.slice(i + 1);
-    const isFail = others.find((other) => {
-      if (other[1] < stu[1]) {
-        return true;
-      } else {
-        return false;
-      }
-    });
-
-    if (!isFail) {
+  let minRank = rearRanks[0];
+  let passCnt = 1;
+  for (let i = 1; i < rearRanks.length; i++) {
+    if (minRank > rearRanks[i]) {
       passCnt++;
+      minRank = rearRanks[i];
     }
   }
 
