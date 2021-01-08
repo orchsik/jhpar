@@ -1,30 +1,31 @@
-import { solution } from './playground';
+import { solution } from './1946';
 
 describe('', () => {
   it('test1', () => {
-    var input = [
+    var inputs = [
+      [3, 2],
       [1, 4],
-      [3, 5],
-      [0, 6],
-      [5, 7],
-      [3, 8],
-      [5, 9],
-      [6, 10],
-      [8, 11],
-      [8, 12],
-      [2, 13],
-      [12, 14],
+      [4, 1],
+      [2, 3],
+      [5, 5],
     ];
-
-    var answer = solution();
-    // expect(answer).toEqual(4);
+    var answer = solution(inputs);
+    expect(answer).toEqual(4);
   });
 
-  // it('test2', () => {
-  //   var input = 4;
-  //   var answer = solution(input);
-  //   expect(answer).toEqual(-1);
-  // });
+  it('test2', () => {
+    var inputs = [
+      [3, 6],
+      [7, 3],
+      [4, 2],
+      [1, 4],
+      [5, 7],
+      [2, 5],
+      [6, 1],
+    ];
+    var answer = solution(inputs);
+    expect(answer).toEqual(3);
+  });
 
   // it('test3', () => {
   //   var input = 6;
