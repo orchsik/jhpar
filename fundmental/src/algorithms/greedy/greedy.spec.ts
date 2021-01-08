@@ -1,4 +1,4 @@
-import { solution } from './1931';
+import { solution } from './playground';
 
 describe('', () => {
   it('test1', () => {
@@ -16,8 +16,8 @@ describe('', () => {
       [12, 14],
     ];
 
-    var answer = solution(input);
-    expect(answer).toEqual(4);
+    var answer = solution();
+    // expect(answer).toEqual(4);
   });
 
   // it('test2', () => {
