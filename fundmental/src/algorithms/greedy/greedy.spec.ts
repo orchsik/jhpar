@@ -1,18 +1,10 @@
-import { solution } from './1080';
+import { solution } from './1744';
 
 describe('', () => {
   it('test1', () => {
-    var inputs = [
-      [3, 4],
-      [0, 0, 0, 0],
-      [0, 0, 1, 0],
-      [0, 0, 0, 0],
-      [1, 0, 0, 1],
-      [1, 0, 1, 1],
-      [1, 0, 0, 1],
-    ];
+    var inputs = [-1, 2, 1, 3];
     var answer = solution(inputs);
-    expect(answer).toEqual(2);
+    expect(answer).toEqual(6);
   });
 
   // it('test2', () => {
