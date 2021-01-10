@@ -41,5 +41,5 @@ while minuses:
   else:
     max += x
 
-print('max', max)
+print(max)
 
