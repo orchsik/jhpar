@@ -2,9 +2,17 @@ import { solution } from './14502';
 
 describe('', () => {
   it('test1', () => {
-    // var inputs = [-1, 2, 1, 3];
-    var answer = solution();
-    expect(answer).toEqual(6);
+    var inputs = [
+      [2, 0, 0, 0, 1, 1, 0],
+      [0, 0, 1, 0, 1, 2, 0],
+      [0, 1, 1, 0, 1, 0, 0],
+      [0, 1, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 1, 1],
+      [0, 1, 0, 0, 0, 0, 0],
+      [0, 1, 0, 0, 0, 0, 0],
+    ];
+    var answer = solution(inputs);
+    // expect(answer).toEqual(6);
   });
 
   // it('test2', () => {
