@@ -57,17 +57,12 @@ while node is not None:
 
 
 def solution(node, answer = ''):
-  print(node, answer)
-  if len(parents) == 0:
-    return answer
-  else:
-    parentValue = parents[node]
-    del parents[node]
-    if len(parents) == 0:
-      return solution(parentValue, parentValue + '/' +  answer)
-    else:
-      for node in parents.keys():
-        if parentValue == node:
-          return solution(parentValue, parentValue + '/' + answer)
-        
+  parentValue = parents[node]
+  del parents[node]
+
+  for node in parents.keys():
+    if parentValue == node:
+      return solution(parentValue, parentValue + ' -> ' + answer)
+  return 's -> '  + answer  + 'end'
+      
 print(solution('fin'))
