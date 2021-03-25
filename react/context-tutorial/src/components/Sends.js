@@ -1,9 +1,18 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { Component } from "react";
+import { useSample } from "../contexts/sample";
 
 class Sends extends Component {
   state = {
     input: "",
   };
+
+  componentDidMount() {
+    // 초기 값 설정
+    this.setState({
+      input: this.props.value,
+    });
+  }
 
   handleChange = (e) => {
     this.setState({ input: e.target.value });
@@ -11,7 +20,8 @@ class Sends extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    // 구현 예정
+    // props로 받은 setValue 호출
+    this.props.setValue(this.state.input);
   };
 
   render() {
@@ -24,4 +34,5 @@ class Sends extends Component {
   }
 }
 
-export default Sends;
+// useSample 사용
+export default useSample(Sends);
