@@ -11,7 +11,6 @@ describe('', () => {
       [0, 1, 0, 0, 0, 0, 0],
       [0, 1, 0, 0, 0, 0, 0],
     ];
-    var answer = solution(inputs);
     // expect(answer).toEqual(6);
   });
 
